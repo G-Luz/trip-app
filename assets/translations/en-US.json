@@ -1,0 +1,41 @@
+{
+  "lets_go": "Let's go",
+  "subtitle": "Access the app with your email or your fingerprint",
+  "type_your_email": "Type your e-mail",
+  "type_your_name": "Type your name",
+  "type_your_password": "Type your password",
+  "repeat_your_password": "Repeat your password",
+  "login": "Login",
+  "forgot_password": "Forgot password?",
+  "unlock_app": "Unlock your app",
+  "or": "Or",
+  "use_biometric": "use your biometric",
+  "dont_have_account": "Don't have an account?",
+  "have_account": "Already have account?",
+  "signup": "Sign-up",
+  "register": "Register",
+
+  "theme": {
+    "theme": "Theme",
+    "dark_theme": "Dark",
+    "light_theme": "Light"
+  },
+
+  "language": {
+    "language": "Language",
+    "pt_language": "Pt - BR",
+    "en_language": "En - US"
+  },
+
+  "drawer": {
+    "home": "Home",
+    "favorite": "Favorites",
+    "account": "Account",
+    "settings": "Settings",
+    "trips": "Trips",
+    "not_autenticate": "Your not autenticate",
+    "app_version": "App version",
+    "logout": "Logout"
+  }
+
+}

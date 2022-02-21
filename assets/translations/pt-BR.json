@@ -1,0 +1,39 @@
+{
+  "lets_go": "Vamos lá",
+  "subtitle": "Acesse o app com seu email ou sua digital",
+  "type_your_email": "Digite seu email",
+  "type_your_name": "Digite seu nome",
+  "type_your_password": "Digite sua senha",
+  "repeat_your_password": "Repita sua senha",
+  "login": "Entrar",
+  "forgot_password": "Esqueceu sua senha?",
+  "unlock_app": "Desbloqueie seu app",
+  "or": "Ou",
+  "use_biometric": "utilize sua digital",
+  "dont_have_account": "Não possui uma conta?",
+  "have_account": "Já possui uma conta?",
+  "signup": "Cadastre-se",
+  "register": "Registrar",
+  "theme": {
+    "theme": "Tema",
+    "dark_theme": "Escuro",
+    "light_theme": "Claro"
+  },
+
+  "language": {
+    "language": "Idioma",
+    "pt_language": "Pt - BR",
+    "en_language": "En - US"
+  },
+
+  "drawer": {
+    "home": "Home",
+    "favorite": "Favoritos",
+    "account": "Perfil",
+    "settings": "Configurações",
+    "trips": "Viagens",
+    "not_autenticate": "Você não está logado",
+    "app_version": "Versão do app",
+    "logout": "Sair"
+  }
+}
