@@ -59,16 +59,10 @@ abstract class SignupControllerBase with Store {
   checkInvalidFields() {
     if (emailController.text.trim().length > 0 ||
         emailController.text.trim().isNotEmpty) {
-
-      print('ta pegando?');
-
       isInvalidEmail = !RegExp(
           r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
           .hasMatch(emailController.text.trim());
     } else {
-
-      print('ta pegando?');
-
       isInvalidEmail = false;
     }
   }

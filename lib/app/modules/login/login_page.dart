@@ -69,7 +69,6 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                           color: Theme.of(context).colorScheme.secondary,
                         ),
                         onPressed: () {
-                          print('cliquei');
                         },
                       ),
                     ),

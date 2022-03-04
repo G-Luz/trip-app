@@ -10,13 +10,6 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   await Firebase.initializeApp();
 
-  // TODO: ANTES, PRECISA FAZER AS VERIFICAÇÕES
-  //TODO: QUANDO VOLTAR, FAZER A INICIALIZAÇAO DO FIREBASE E LOGIN
-
-
-  //todo: deixar a primary color TEAL; mesclar com o secondary dos background dark/light
-
-
   runApp(
     EasyLocalization(
       supportedLocales: [Locale('pt', 'BR'), Locale('en', 'US')],

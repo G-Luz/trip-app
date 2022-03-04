@@ -115,15 +115,6 @@ class _PlaceDetailsPageState
               backgroundColor: Colors.transparent,
               // backgroundColor: Colors.teal,
               flexibleSpace: LayoutBuilder(builder: (context, constraints) {
-                print("eae: ${constraints.biggest.height}");
-                // print("Opa: ${MediaQuery.of(context).padding.top + kToolbarHeight}");
-
-                // if(constraints.biggest.height < 100){
-                //
-                //
-                //
-                // }
-
                 return FlexibleSpaceBar(
                   background: Hero(
                     tag: 'tag$index',

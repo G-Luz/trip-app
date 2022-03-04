@@ -17,9 +17,6 @@ abstract class AppThemeControllerBase with Store {
 
   AppThemeControllerBase() {
     hasDefaultTheme().then((hasTheme) {
-
-      print("Tem tema:???: ${hasTheme}");
-
       if (!hasTheme) {
         setTheme(Environments.lightTheme);
       } else {
@@ -39,9 +36,6 @@ abstract class AppThemeControllerBase with Store {
   getTheme() async {
     var prefsResponse =
         await _sharedPrefsController.getValueByKey(Environments.keyAppTheme);
-
-    print("O que é isso? ${prefsResponse}");
-
     theme = prefsResponse;
   }
 
