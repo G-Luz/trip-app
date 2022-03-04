@@ -108,44 +108,42 @@ class _PlaceDetailsPageState
         slivers: <Widget>[
           Observer(builder: (_) {
             return SliverAppBar(
-              pinned: true,
-              snap: true,
-              floating: true,
+              pinned: false,
+              snap: false,
+              floating: false,
               expandedHeight: 250,
               backgroundColor: Colors.transparent,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Hero(
-                  tag: 'tag$index',
-                  child: Image.network(
-                    'https://i.pinimg.com/564x/18/a5/be/18a5be8b2358dfd9853656c7b2ae654c.jpg',
-                    fit: BoxFit.fill,
+              // backgroundColor: Colors.teal,
+              flexibleSpace: LayoutBuilder(builder: (context, constraints) {
+                print("eae: ${constraints.biggest.height}");
+                // print("Opa: ${MediaQuery.of(context).padding.top + kToolbarHeight}");
+
+                // if(constraints.biggest.height < 100){
+                //
+                //
+                //
+                // }
+
+                return FlexibleSpaceBar(
+                  background: Hero(
+                    tag: 'tag$index',
+                    child: Image.network(
+                      'https://i.pinimg.com/564x/18/a5/be/18a5be8b2358dfd9853656c7b2ae654c.jpg',
+                      fit: BoxFit.fill,
+                    ),
                   ),
-                ),
-                // centerTitle: true,
-                title: controller.selectedIndex != 0
-                    ? Container(
-                        height: 60,
-                        width: 250,
-                        alignment: Alignment.bottomLeft,
-                        // color: Colors.purple,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            AppText(
-                              text: 'Trip to',
-                              fontSize: 10,
-                            ),
-                            AppText(
-                              text: 'Place name',
-                              fontSize: 25,
-                            ),
-                          ],
-                        ),
-                      )
-                    : Container(),
-                titlePadding:
-                    EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-              ),
+                  // centerTitle: true,
+                  // title: AppText(
+                  //   text: 'Place name',
+                  //   fontSize: 20,
+                  //   fontColor: AppColors.white,
+                  // ),
+                  // centerTitle: true,
+                  // titlePadding:
+                  //     EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  // collapseMode: CollapseMode.parallax,
+                );
+              }),
               actions: [
                 IconButton(
                   onPressed: () {},
@@ -172,12 +170,10 @@ class _PlaceDetailsPageState
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Observer(
-                              builder: (_) {
-                                return AppSectionTitle(
-                                    sectionIndex: controller.selectedIndex);
-                              }
-                            ),
+                            Observer(builder: (_) {
+                              return AppSectionTitle(
+                                  sectionIndex: controller.selectedIndex);
+                            }),
                             Container(
                                 margin:
                                     const EdgeInsets.symmetric(horizontal: 20),
@@ -189,11 +185,13 @@ class _PlaceDetailsPageState
                                       text: '\$ 150',
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold,
+                                      fontColor: Colors.teal,
                                     ),
                                     const SizedBox(height: 10),
                                     AppText(
-                                      text: '*Preço estimado',
+                                      text: '* Preço estimado',
                                       fontSize: 12,
+                                      fontColor: Colors.teal,
                                     ),
                                   ],
                                 )),

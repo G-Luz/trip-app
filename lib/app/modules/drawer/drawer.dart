@@ -132,17 +132,23 @@ class DrawerPage extends WidgetModule {
                     AppDrawerListOption(
                       text: 'drawer.home'.tr(),
                       icon: Icons.home_outlined,
-                      onPressedCallback: () {},
+                      onPressedCallback: () {
+                        controller.homeController.handleDrawer();
+                      },
                     ),
                     AppDrawerListOption(
                       text: 'drawer.favorite'.tr(),
                       icon: Icons.favorite_border,
-                      onPressedCallback: () {},
+                      onPressedCallback: () {
+                        controller.openFavoriteList();
+                      },
                     ),
                     AppDrawerListOption(
                       text: 'drawer.account'.tr(),
                       icon: Icons.person_outline,
-                      onPressedCallback: () {},
+                      onPressedCallback: () {
+                        controller.openUserAccount();
+                      },
                     ),
                     AppDivider(
                       barColor: Theme.of(context).colorScheme.onSurface,

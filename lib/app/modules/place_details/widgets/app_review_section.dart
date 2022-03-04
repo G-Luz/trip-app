@@ -29,12 +29,16 @@ class AppReviewSection extends StatelessWidget {
                     text: 'Atendimento ruim',
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
+                    fontColor: Theme.of(context).colorScheme.onSurface,
                   ),
                   Flexible(
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.7,
                       //100 char
-                      child: AppText(text: 'Lugar muito bom, porém com um atendimento ruim'),
+                      child: AppText(
+                        text: 'Lugar muito bom, porém com um atendimento ruim',
+                        fontColor: Theme.of(context).colorScheme.onSurface,
+                      ),
                     ),
                   ),
                 ],
@@ -42,7 +46,10 @@ class AppReviewSection extends StatelessWidget {
             ],
           ),
         ),
-        AppDivider(height: 0.1, barColor: Colors.teal,),
+        AppDivider(
+          height: 0.1,
+          barColor: Colors.teal,
+        ),
       ],
     );
   }

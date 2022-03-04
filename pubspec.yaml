@@ -43,6 +43,9 @@ dependencies:
   skeleton_text: ^3.0.0
   timeline_tile: ^2.0.0
   flutter_credit_card: ^3.0.1
+  bubble_showcase: ^1.1.0
+  font_awesome_flutter: ^9.2.0
+
 
 dev_dependencies:
   flutter_test:

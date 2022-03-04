@@ -13,24 +13,34 @@ abstract class SettingsControllerBase with Store {
   AppThemeController appThemeController = Modular.get();
 
   @action
-  changeTheme() {
-    if (appThemeController.theme == Environments.lightTheme) {
-      appThemeController.setTheme(Environments.darkTheme);
-    } else {
+  changeLightTheme() {
+    if (appThemeController.theme == Environments.darkTheme) {
       appThemeController.setTheme(Environments.lightTheme);
     }
   }
 
   @action
-  changeAppLanguage(BuildContext context) {
+  changeDarkTheme() {
+    if (appThemeController.theme == Environments.lightTheme) {
+      appThemeController.setTheme(Environments.darkTheme);
+    }
+  }
+
+  @action
+  changeEnglishLanguage(BuildContext context) {
     if (context.locale == const Locale('pt', 'BR')) {
       context.setLocale(const Locale('en', 'US'));
-    } else {
+    }
+  }
+
+  @action
+  changePortugueseLanguage(BuildContext context) {
+    if (context.locale == const Locale('en', 'US')) {
       context.setLocale(const Locale('pt', 'BR'));
     }
   }
 
-  bool isPortugueseLanguage(BuildContext context){
+  bool isPortugueseLanguage(BuildContext context) {
     return context.locale == const Locale('pt', 'BR') ? true : false;
   }
 

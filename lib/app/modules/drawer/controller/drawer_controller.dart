@@ -13,29 +13,38 @@ part 'drawer_controller.g.dart';
 class AppDrawerController = DrawerControllerBase with _$AppDrawerController;
 
 abstract class DrawerControllerBase with Store {
-  final HomeController _homeController = Modular.get<HomeController>();
+  final HomeController homeController = Modular.get<HomeController>();
   final AppThemeController appThemeController =
       Modular.get<AppThemeController>();
 
   DrawerControllerBase() {}
 
   openThemeSettings() {
-    _homeController.handleDrawer();
-    Future.delayed(
-        const Duration(milliseconds: Durations.openPageFromDrawer),
-        () => {
-              Modular.to
-                  .pushNamed(Routes.settings, arguments: {'option': 'theme'}),
-            });
+    openScreen(() => {
+          Modular.to.pushNamed(Routes.settings, arguments: {'option': 'theme'}),
+        });
   }
 
   openLanguageSettings() {
-    _homeController.handleDrawer();
-    Future.delayed(
-        const Duration(milliseconds: Durations.openPageFromDrawer),
-        () => {
-              Modular.to.pushNamed(Routes.settings,
-                  arguments: {'option': 'language'}),
-            });
+    openScreen(() => {
+          Modular.to
+              .pushNamed(Routes.settings, arguments: {'option': 'language'}),
+        });
+  }
+
+  openFavoriteList() => {
+        openScreen(() => {
+              Modular.to.pushNamed(Routes.listTrips),
+            })
+      };
+
+  openUserAccount() => {openScreen(() => {
+    Modular.to.pushNamed(Routes.userAccount),
+  })};
+
+  openScreen(Function handleOpenPage) {
+    homeController.handleDrawer();
+    Future.delayed(const Duration(milliseconds: Durations.openPageFromDrawer),
+        () => {handleOpenPage()});
   }
 }

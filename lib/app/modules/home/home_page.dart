@@ -222,10 +222,6 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                               ],
                             ),
                           ),
-
-
-                          //todo: resolver esse cara aqui (listview com tamanho definido)
-                          // Flexible(
                           Container(
                             margin: const EdgeInsets.symmetric(horizontal: 20),
                             child: ListView.builder(
@@ -236,7 +232,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                                 itemBuilder: (context, index) {
                                   return Container(
                                     height: 100,
-                                    margin: EdgeInsets.symmetric(vertical: 10),
+                                    margin: EdgeInsets.symmetric(vertical: 5),
                                     padding: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
                                         color: Colors.grey.withOpacity(0.1),
@@ -302,19 +298,19 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
     List<Widget> buttonList = [
       AppCategoryButton(
           buttonLabel: 'Romatico',
-          buttonIconPath: "assets/images/ic_spiritual.png",
+          buttonIconPath: "assets/images/ic_romantic.png",
           onPressedCallback: () {}),
       AppCategoryButton(
           buttonLabel: 'Cultural',
-          buttonIconPath: "assets/images/ic_spiritual.png",
+          buttonIconPath: "assets/images/ic_culture.png",
           onPressedCallback: () {}),
       AppCategoryButton(
           buttonLabel: 'Relaxante',
-          buttonIconPath: "assets/images/ic_spiritual.png",
+          buttonIconPath: "assets/images/ic_relaxing.png",
           onPressedCallback: () {}),
       AppCategoryButton(
           buttonLabel: 'Espiritual',
-          buttonIconPath: "assets/images/ic_spiritual.png",
+          buttonIconPath: "assets/images/ic_chakras.png",
           onPressedCallback: () {}),
     ];
 

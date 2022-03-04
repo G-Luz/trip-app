@@ -19,13 +19,11 @@
     "dark_theme": "Escuro",
     "light_theme": "Claro"
   },
-
   "language": {
     "language": "Idioma",
     "pt_language": "Pt - BR",
     "en_language": "En - US"
   },
-
   "drawer": {
     "home": "Home",
     "favorite": "Favoritos",
@@ -35,5 +33,13 @@
     "not_autenticate": "Você não está logado",
     "app_version": "Versão do app",
     "logout": "Sair"
+  },
+  "filters_title": {
+    "favorite": "Favoritos",
+    "romantic": "Romântico",
+    "cultural": "Cultural",
+    "relaxing": "Relaxante",
+    "spiritual": "Espiritual",
+    "best_places": "Melhores lugares"
   }
 }

@@ -30,11 +30,8 @@ abstract class AppThemeControllerBase with Store {
 
   @action
   setTheme(String theme) async {
-    var test = await _sharedPrefsController.setStringValue(
+    await _sharedPrefsController.setStringValue(
         Environments.keyAppTheme, theme);
-
-    print("Ta chamando aqui?");
-
     this.theme = theme;
   }
 
@@ -42,6 +39,9 @@ abstract class AppThemeControllerBase with Store {
   getTheme() async {
     var prefsResponse =
         await _sharedPrefsController.getValueByKey(Environments.keyAppTheme);
+
+    print("O que é isso? ${prefsResponse}");
+
     theme = prefsResponse;
   }
 

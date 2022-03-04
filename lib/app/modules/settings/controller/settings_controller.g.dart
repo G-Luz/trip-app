@@ -13,22 +13,44 @@ mixin _$SettingsController on SettingsControllerBase, Store {
       ActionController(name: 'SettingsControllerBase');
 
   @override
-  dynamic changeTheme() {
+  dynamic changeLightTheme() {
     final _$actionInfo = _$SettingsControllerBaseActionController.startAction(
-        name: 'SettingsControllerBase.changeTheme');
+        name: 'SettingsControllerBase.changeLightTheme');
     try {
-      return super.changeTheme();
+      return super.changeLightTheme();
     } finally {
       _$SettingsControllerBaseActionController.endAction(_$actionInfo);
     }
   }
 
   @override
-  dynamic changeAppLanguage(BuildContext context) {
+  dynamic changeDarkTheme() {
     final _$actionInfo = _$SettingsControllerBaseActionController.startAction(
-        name: 'SettingsControllerBase.changeAppLanguage');
+        name: 'SettingsControllerBase.changeDarkTheme');
     try {
-      return super.changeAppLanguage(context);
+      return super.changeDarkTheme();
+    } finally {
+      _$SettingsControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic changeEnglishLanguage(BuildContext context) {
+    final _$actionInfo = _$SettingsControllerBaseActionController.startAction(
+        name: 'SettingsControllerBase.changeEnglishLanguage');
+    try {
+      return super.changeEnglishLanguage(context);
+    } finally {
+      _$SettingsControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic changePortugueseLanguage(BuildContext context) {
+    final _$actionInfo = _$SettingsControllerBaseActionController.startAction(
+        name: 'SettingsControllerBase.changePortugueseLanguage');
+    try {
+      return super.changePortugueseLanguage(context);
     } finally {
       _$SettingsControllerBaseActionController.endAction(_$actionInfo);
     }

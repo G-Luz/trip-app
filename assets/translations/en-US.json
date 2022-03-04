@@ -36,6 +36,14 @@
     "not_autenticate": "Your not autenticate",
     "app_version": "App version",
     "logout": "Logout"
+  },
+  "filters_title": {
+    "favorite": "Favorites",
+    "romantic": "Romantic",
+    "cultural": "Cultural",
+    "relaxing": "Relaxing",
+    "spiritual": "Spitirual",
+    "best_places": "Best places"
   }
 
 }

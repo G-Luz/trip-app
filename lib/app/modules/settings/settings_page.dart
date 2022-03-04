@@ -39,9 +39,8 @@ class _SettingsPageState extends ModularState<SettingsPage, SettingsController>
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: IconThemeData(
-          color: Theme.of(context).colorScheme.onSurface
-        ),
+        iconTheme:
+            IconThemeData(color: Theme.of(context).colorScheme.onSurface),
         title: AppText(
           text: 'Configurações',
           fontSize: 18,
@@ -72,8 +71,7 @@ class _SettingsPageState extends ModularState<SettingsPage, SettingsController>
                       height: 220,
                       decoration: BoxDecoration(
                           // border: Border.all(width: 0.1, color: Colors.green),
-                          border: Border.all(
-                              width: 0.1, color: Colors.teal),
+                          border: Border.all(width: 0.1, color: Colors.teal),
                           borderRadius: BorderRadius.circular(10)),
                       child: Observer(builder: (context) {
                         return Row(
@@ -89,7 +87,7 @@ class _SettingsPageState extends ModularState<SettingsPage, SettingsController>
                                   iconHeightSize: 80,
                                   isSelectedOption: !controller.isDarkTheme(),
                                   onSelectedOption: () {
-                                    controller.changeTheme();
+                                    controller.changeLightTheme();
                                   }),
                               AppSettingsOption(
                                   optionTitle: 'theme.dark_theme'.tr(),
@@ -101,7 +99,7 @@ class _SettingsPageState extends ModularState<SettingsPage, SettingsController>
                                   iconHeightSize: 80,
                                   isSelectedOption: controller.isDarkTheme(),
                                   onSelectedOption: () {
-                                    controller.changeTheme();
+                                    controller.changeDarkTheme();
                                   }),
                             ]);
                       }),
@@ -126,8 +124,7 @@ class _SettingsPageState extends ModularState<SettingsPage, SettingsController>
                       height: 220,
                       decoration: BoxDecoration(
                           // border: Border.all(width: 0.1, color: Colors.green),
-                          border: Border.all(
-                              width: 0.1, color: Colors.teal),
+                          border: Border.all(width: 0.1, color: Colors.teal),
                           borderRadius: BorderRadius.circular(10)),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -142,7 +139,7 @@ class _SettingsPageState extends ModularState<SettingsPage, SettingsController>
                                 isSelectedOption:
                                     controller.isPortugueseLanguage(context),
                                 onSelectedOption: () {
-                                  controller.changeAppLanguage(context);
+                                  controller.changePortugueseLanguage(context);
                                 }),
                             AppSettingsOption(
                                 optionTitle: 'language.en_language'.tr(),
@@ -154,7 +151,7 @@ class _SettingsPageState extends ModularState<SettingsPage, SettingsController>
                                 isSelectedOption:
                                     !controller.isPortugueseLanguage(context),
                                 onSelectedOption: () {
-                                  controller.changeAppLanguage(context);
+                                  controller.changeEnglishLanguage(context);
                                 }),
                           ]),
                     ),

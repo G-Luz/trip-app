@@ -16,12 +16,13 @@ class AppCategoryButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {},
       style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+        // foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
         backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+
         elevation: MaterialStateProperty.all<double>(0),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           const RoundedRectangleBorder(
-            side: BorderSide(color: Colors.teal, width: 0.1),
+            // side: BorderSide(color: Colors.teal, width: 0.1),
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
         ),
@@ -32,8 +33,8 @@ class AppCategoryButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-              width: 30,
-              height: 40,
+              width: 40,
+              height: 50,
               child: Image.asset(buttonIconPath)),
           AppText(
             text: buttonLabel,

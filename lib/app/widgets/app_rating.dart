@@ -27,6 +27,7 @@ class AppRating extends StatelessWidget {
               child: AppText(
                 text: '(255)',
                 fontSize: 7,
+                fontColor: Theme.of(context).colorScheme.onSurface,
               ))
         ],
       ),

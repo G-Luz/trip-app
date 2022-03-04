@@ -8,4 +8,7 @@ class Routes {
   static const String bookingTripDetails = "/bookingTripDetails";
   static const String drawer = "/drawer";
   static const String settings = "/settings";
+  static const String listTrips = "/listTrips";
+  static const String userAccount = "/userAccount";
+  static const String aboutApp = "/aboutApp";
 }
